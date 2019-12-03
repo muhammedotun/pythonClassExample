@@ -1,7 +1,7 @@
 class Person:
     """docstring for Person."""
 
-    def __init__(self, number, pName, pLastName):
-        self.personNumber = number
-        self.personName = pName
-        self.personLastName = pLastName
+    def __init__(self, number, name, lastName):
+        self.number = number
+        self.name = name
+        self.lastName = lastName

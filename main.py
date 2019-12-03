@@ -15,22 +15,22 @@ class main:
     # create list
 
 
-    def addStudent(studentList, stdNumber, stdName, stdLastName, course):
-        print(course.courseCapasity)
-        if course.courseCapasity > 0:
-            studentList.append(Student(stdNumber,stdName,stdLastName,course))
-        else:
-            print("the course is full")
+    def addStudent(studentList, stdNumber, stdName, stdLastName):
+        studentList.append(Student(stdNumber,stdName,stdLastName))
 
     def printStudentList(studentList):
         for student in studentList:
             student.printStudent()
 
-    addStudent(studentList, 1, "emirhan", "eren", python101)
-    addStudent(studentList, 2, "yahya furkan", "kılıçoğlu", python101)
-    addStudent(studentList, 3, "onur", "kerim", python101)
-    addStudent(studentList, 4, "kasım", "eren", python101)
+    addStudent(studentList, 1, "emirhan", "eren")
+    addStudent(studentList, 2, "yahya furkan", "kılıçoğlu")
+    addStudent(studentList, 3, "onur", "kerim")
+    addStudent(studentList, 4, "kasım", "eren")
 
     printStudentList(studentList)
+
+    studentList[0].addCourse(python101)
+
+    print(help(Student))
 if __name__ == '__main__':
     main()
